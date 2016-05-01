@@ -1,24 +1,25 @@
-## README
+# TDC - Chat
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A example of chat application showcasing the capabilities of Action Cable.
 
-Things you may want to cover:
+## Dependencies
 
-* Ruby version
+To run this project you need to have:
 
-* System dependencies
+* Ruby 2.3.0
+* PostgreSQL
+* Redis
 
-* Configuration
+## Setup the project
 
-* Database creation
+* Install the dependencies above
+* `$ git clone git@github.com:karreiro/tdc-chat.git`
+* `$ cd tdc-chat`
+* `$ bin/setup`
 
-* Database initialization
+## Starting the servers
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Run `./bin/setup`
+* Open up a separate terminal and run: `rails s`
+* One more terminal to run redis server: `redis-server`
+* Visit `http://localhost:3000`
