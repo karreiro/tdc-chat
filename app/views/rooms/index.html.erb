@@ -2,4 +2,12 @@
   Rooms
 </h1>
 
+<ul>
+  <% @rooms.each do |room| %>
+    <li>
+      <%= link_to room.name, room_url(room) %>
+    </li>
+  <% end %>
+</ul>
+
 Logged as <%= current_user %>
