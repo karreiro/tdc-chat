@@ -1,0 +1,15 @@
+AllCops:
+  Exclude:
+    - vendor/**/*
+    - log/**/*
+    - db/schema.rb
+    - bin/*
+
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
