@@ -8,7 +8,9 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should log in a new user' do
-    post session_url, params: { username: 'karreiro' }
+    assert_difference('User.count') do
+      post session_url, params: { username: 'karreiro' }
+    end
 
     assert controller.logged_in?
     assert_redirected_to root_url
