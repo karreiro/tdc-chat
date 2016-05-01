@@ -4,11 +4,11 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?
 
   def logged_in?
-    !session[:username].nil?
+    !current_user.nil?
   end
 
   def current_user
-    session[:username]
+    @current_user ||= User.find_by(id: cookies.signed[:current_user_id])
   end
 
   protected
