@@ -40,7 +40,7 @@ Rails.application.configure do
 
   # Action Cable endpoint configuration
   config.action_cable.url = 'wss://chat-tdc.herokuapp.com/cable'
-  config.action_cable.allowed_request_origins = [ 'http://chat-tdc.herokuapp.com', /http:\/\/chat-tdc.herokuapp.*/ ]
+  config.action_cable.allowed_request_origins = ['http://chat-tdc.herokuapp.com', %r{http:\/\/chat-tdc.herokuapp.*}]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
