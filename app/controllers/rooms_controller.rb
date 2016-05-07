@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
   before_action :authenticate!
-  before_action :new_online_user, only: [:index]
+  before_action :notify_users, only: [:index]
 
   def index
     @rooms = Room.all
@@ -12,7 +12,7 @@ class RoomsController < ApplicationController
 
   private
 
-  def new_online_user
+  def notify_users
     OnlineUsersJob.perform_later(current_user)
   end
 end
