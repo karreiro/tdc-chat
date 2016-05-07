@@ -4,6 +4,7 @@ AllCops:
     - log/**/*
     - db/schema.rb
     - bin/*
+    - test/support/action_cable/*
 
 Documentation:
   Enabled: false
