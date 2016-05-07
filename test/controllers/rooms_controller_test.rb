@@ -1,12 +1,22 @@
 require 'test_helper'
 
 class RoomsControllerTest < ActionDispatch::IntegrationTest
-  test 'should get index when an user is logged in' do
+  include ActiveJob::TestHelper
+
+  test 'should get index when an user is logged in and notify other users' do
     login('karreiro')
 
     get rooms_url
 
     assert_response :success
+  end
+
+  test 'should notify other users when get index' do
+    login('karreiro')
+
+    assert_enqueued_with(job: OnlineUsersJob) do
+      get rooms_url
+    end
   end
 
   test 'should not get index when any user is logged in' do
