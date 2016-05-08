@@ -2,4 +2,11 @@
   <%= @room.name %>
 </h1>
 
+<ul data-room-id="<%= @room.id %>" id="messages"></ul>
+
+<%= form_tag nil, id: 'new_message' do %>
+  <%= text_field_tag :content %><br>
+  <%= submit_tag 'Enviar' %>
+<% end %>
+
 <%= link_to 'Back', rooms_url %>

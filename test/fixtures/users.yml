@@ -1,7 +1,17 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+eder:
+  username: ederign
 
-one:
-  username: MyString
+guilherme:
+  username: g_carreiro
 
-two:
-  username: MyString
+natalia:
+  username: natalia
+
+paulo:
+  username: paulo
+
+tiago:
+  username: tiago
+
+leandro:
+  username: lulao

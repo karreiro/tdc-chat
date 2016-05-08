@@ -10,7 +10,7 @@ class OnlineUsersJobTest < ActiveJob::TestCase
   private
 
   def user
-    users(:one)
+    users(:guilherme)
   end
 
   def check_broadcast_call(message: nil, user: nil)

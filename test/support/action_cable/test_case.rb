@@ -11,4 +11,20 @@ class ActionCable::TestCase < ActiveSupport::TestCase
       sleep 0.1
     end
   end
+
+  def assert_broadcast_to(channel: nil, data: nil)
+    ActionCable::Server::Base.any_instance.expects(:broadcast).with(channel, data)
+  end
+
+  def assert_stream_from(klass, broadcasting)
+    klass.any_instance.expects(:stream_from).with(broadcasting)
+  end
+
+  def connection(user = nil)
+    TestConnection.new(user)
+  end
+
+  def identifier
+    ''
+  end
 end
