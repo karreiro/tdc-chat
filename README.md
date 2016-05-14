@@ -2,6 +2,8 @@
 
 A example of chat application showcasing the capabilities of Action Cable.
 
+[TDC - Slides](https://github.com/karreiro/tdc-chat/raw/master/doc/action-cable-ruby-tdc-14-05-2016.pdf)
+
 ## Dependencies
 
 To run this project you need to have:
